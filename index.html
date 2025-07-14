@@ -1,0 +1,86 @@
+<!--
+    # Coded With 🧡 By Youssef Almodhesh
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    
+    <div class="overlay d-none">
+        <div class="modal">
+            <div class="modal-header">
+                <h1>Add Menu Item</h1>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="iName" placeholder="Enter Name">
+                <input type="text" id="description" placeholder="Enter Description">
+                <select id="category">
+                    <option disabled selected value="none">Select Category</option>
+                    <option value="Desert">Desert</option>
+                    <option value="Cookie">Cookie</option>
+                    <option value="Cake">Cake</option>
+                    <option value="Sandwich">Sandwich</option>
+                    <option value="Salad">Salad</option>
+                    <option value="Sea Food">Sea Food</option>
+                </select>
+                <input type="number" id="price" placeholder="Enter Price">
+                <input type="text" id="imgUrl" placeholder="Enter Image URI">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="save-modal">Save</button>
+                <button type="button" class="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="alerts">
+
+    </div>
+
+    <main>
+        <div class="container">
+
+            <div class="items-container">
+                <div class="items-header">
+                    <button type="button" class="add-item"><i class="bi bi-plus-circle"></i> Add Item</button>
+                    <div class="counter">Items: <span class="items-count">0</span></div>
+                </div>
+                <div class="items-body">
+                    <div class="no-data-alert">No Items Yet.</div>
+                    <table class="items-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Picture</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="items">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
